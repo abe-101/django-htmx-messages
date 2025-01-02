@@ -1,0 +1,22 @@
+# Changes here will be overwritten by Copier
+_commit: ad54759
+_src_path: gh:browniebroke/pypackage-template
+add_me_as_contributor: true
+copyright_year: '2025'
+django_app_shorthand: htmx_messages
+documentation: true
+email: abe@habet.dev
+full_name: Abe Hanoka
+github_username: abe-101
+has_cli: false
+initial_commit: true
+is_django_package: true
+open_source_license: MIT
+package_name: django_htmx_messages
+project_name: Django Htmx Messages
+project_short_description: Django+HTMX integration with the messages framework
+project_slug: django-htmx-messages
+run_uv_sync: true
+setup_github: true
+setup_pre_commit: true
+
