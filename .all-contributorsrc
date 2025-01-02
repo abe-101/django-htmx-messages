@@ -9,7 +9,19 @@
   "imageSize": 80,
   "commit": true,
   "commitConvention": "angular",
-  "contributors": [],
+  "contributors": [
+    {
+      "login": "abe-101",
+      "name": "Abe Hanoka",
+      "avatar_url": "https://avatars.githubusercontent.com/u/82916197?v=4",
+      "profile": "https://www.habet.dev/",
+      "contributions": [
+        "code",
+        "ideas",
+        "doc"
+      ]
+    }
+  ],
   "contributorsPerLine": 7,
   "skipCi": true
 }
