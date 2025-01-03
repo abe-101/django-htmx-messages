@@ -40,6 +40,12 @@
 
 Django+HTMX integration with the messages framework
 
+A PyPI package for [Benoit Blanchon's django-htmx-messages-framework](https://github.com/bblanchon/django-htmx-messages-framework/blob/oob) (used with permission). It integrates Django's messages framework with HTMX for dynamic toast notifications.
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/bblanchon/django-htmx-messages-framework/main/django-htmx-messages-framework.gif" alt="Demo">
+</p>
+
 ## Installation
 
 Install this via pip (or your favourite package manager):
@@ -48,11 +54,36 @@ Install this via pip (or your favourite package manager):
 
 Add the app to your `INSTALLED_APPS`:
 
+````python
 ```python
 INSTALLED_APPS = [
-    # ...
     "django_htmx_messages",
 ]
+
+MIDDLEWARE = [
+    "django_htmx_messages.middleware.HtmxMessageMiddleware",
+]
+````
+
+Add to your base template:
+
+```html
+<head>
+  <script src="{% static 'htmx.min.js' %}" defer></script>
+  <script src="{% static 'toasts.js' %}" defer></script>
+</head>
+<body>
+  {# Your content here #} {% include 'toasts.html' %}
+</body>
+```
+
+## Try the Demo
+
+```bash
+git clone https://github.com/abe-101/django-htmx-messages.git
+cd django-htmx-messages
+uv sync
+uv run manage.py runserver
 ```
 
 ## Contributors ✨
@@ -81,7 +112,8 @@ This project follows the [all-contributors](https://github.com/all-contributors/
 
 ## Credits
 
-This package was created with
-[Copier](https://copier.readthedocs.io/) and the
-[browniebroke/pypackage-template](https://github.com/browniebroke/pypackage-template)
-project template.
+- Original implementation by [Benoit Blanchon](https://github.com/bblanchon/django-htmx-messages-framework/blob/oob)
+  This package was created with
+  [Copier](https://copier.readthedocs.io/) and the
+  [browniebroke/pypackage-template](https://github.com/browniebroke/pypackage-template)
+  project template.
