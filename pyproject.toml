@@ -96,7 +96,6 @@ addopts = """\
     --ds=tests.settings
     """
 pythonpath = [ "src" ]
-django_find_project = false
 
 [tool.coverage.run]
 branch = true
