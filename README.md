@@ -40,6 +40,12 @@
 
 Django+HTMX integration with the messages framework
 
+A PyPI package for [Benoit Blanchon's django-htmx-messages-framework](https://github.com/bblanchon/django-htmx-messages-framework/blob/oob) (used with permission). It integrates Django's messages framework with HTMX for dynamic toast notifications.
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/bblanchon/django-htmx-messages-framework/main/django-htmx-messages-framework.gif" alt="Demo">
+</p>
+
 ## Installation
 
 Install this via pip (or your favourite package manager):
@@ -48,11 +54,36 @@ Install this via pip (or your favourite package manager):
 
 Add the app to your `INSTALLED_APPS`:
 
+````python
 ```python
 INSTALLED_APPS = [
-    # ...
     "django_htmx_messages",
 ]
+
+MIDDLEWARE = [
+    "django_htmx_messages.middleware.HtmxMessageMiddleware",
+]
+````
+
+Add to your base template:
+
+```html
+<head>
+  <script src="{% static 'htmx.min.js' %}" defer></script>
+  <script src="{% static 'toasts.js' %}" defer></script>
+</head>
+<body>
+  {# Your content here #} {% include 'toasts.html' %}
+</body>
+```
+
+## Try the Demo
+
+```bash
+git clone https://github.com/abe-101/django-htmx-messages.git
+cd django-htmx-messages
+uv sync
+uv run manage.py runserver
 ```
 
 ## Contributors ✨
@@ -61,8 +92,19 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 
 <!-- prettier-ignore-start -->
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
-<!-- markdownlint-enable -->
+<table>
+  <tbody>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://www.habet.dev/"><img src="https://avatars.githubusercontent.com/u/82916197?v=4?s=80" width="80px;" alt="Abe Hanoka"/><br /><sub><b>Abe Hanoka</b></sub></a><br /><a href="https://github.com/abe-101/django-htmx-messages/commits?author=abe-101" title="Code">💻</a> <a href="#ideas-abe-101" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/abe-101/django-htmx-messages/commits?author=abe-101" title="Documentation">📖</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 <!-- prettier-ignore-end -->
 
@@ -70,7 +112,8 @@ This project follows the [all-contributors](https://github.com/all-contributors/
 
 ## Credits
 
-This package was created with
-[Copier](https://copier.readthedocs.io/) and the
-[browniebroke/pypackage-template](https://github.com/browniebroke/pypackage-template)
-project template.
+- Original implementation by [Benoit Blanchon](https://github.com/bblanchon/django-htmx-messages-framework/blob/oob)
+  This package was created with
+  [Copier](https://copier.readthedocs.io/) and the
+  [browniebroke/pypackage-template](https://github.com/browniebroke/pypackage-template)
+  project template.
