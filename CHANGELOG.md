@@ -1,5 +1,11 @@
 # Changelog
 
+## v0.1.1 (2025-01-03)
+
+### Bug fixes
+
+- Update manifest.in paths and add missing static files ([`f97c939`](https://github.com/abe-101/django-htmx-messages/commit/f97c939e00aa4ff274ec321e5e43da09fbfd387d))
+
 ## v0.1.0 (2025-01-03)
 
 ### Documentation

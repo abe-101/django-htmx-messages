@@ -15,7 +15,7 @@ from sphinx.ext import apidoc
 project = "Django Htmx Messages"
 copyright = "2025, Abe Hanoka"
 author = "Abe Hanoka"
-release = "0.1.0"
+release = "0.1.1"
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
