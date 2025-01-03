@@ -1,2 +1,2 @@
-include htmx_messages/static/*
-include htmx_messages/templates/*
+include src/django_htmx_messages/static/*
+include src/django_htmx_messages/templates/*
